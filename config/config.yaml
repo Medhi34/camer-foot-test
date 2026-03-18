@@ -1,0 +1,25 @@
+# Hyperparamètres de détection et configuration terrain
+yolo:
+  model_path: "models/yolov11.pt"           # chemin du modèle YOLOv11
+  confidence_threshold: 0.25
+  classes: [ball, player, referee, goalkeeper]
+  field_mask:
+    enabled: true
+    mask_polygon: [[0,0], [1280,0], [1280,720], [0,720]]    # points d'exemple (à ajuster selon vidéo)
+tracking:
+  max_age: 30
+  min_hits: 5
+  iou_threshold: 0.6
+team_clustering:
+  n_clusters: 2
+  color_space: "lab"
+  voting_window: 30
+calibration:
+  pitch_length: 105     # mètres
+  pitch_width: 68       # mètres
+  keypoint_detection_model: "models/soccernet-v2.pth"
+export:
+  format: "parquet"
+  cdf_schema_path: "schemas/common_data_format.json"
+logging:
+  level: "INFO"

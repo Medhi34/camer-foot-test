@@ -1,0 +1,31 @@
+football-video-pipeline/
+├── vision/
+│   ├── detection.py
+│   ├── tracking.py
+│   ├── team_clustering.py
+│   └── __init__.py
+├── analytics/
+│   ├── calibration.py
+│   ├── homography.py
+│   ├── smoothing.py
+│   └── __init__.py
+├── core/
+│   ├── domain.py                # Définitions des entités du domaine (Ball, Player, Team, Frame etc.)
+│   ├── services.py              # Orchestrateurs du pipeline, logiques métier
+│   └── __init__.py
+├── io/
+│   ├── data_loader.py
+│   ├── exporter.py
+│   └── __init__.py
+├── config/
+│   └── config.yaml
+├── tests/
+│   ├── test_calibration.py
+│   ├── test_homography.py
+│   ├── test_smoothing.py
+│   ├── test_detection.py
+│   ├── test_tracking.py
+│   └── __init__.py
+├── requirements.txt
+├── main.py                      # Point d’entrée du pipeline
+└── README.md

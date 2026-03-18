@@ -1,0 +1,8 @@
+ultralytics
+kloppy
+polars
+opencv-python
+mplsoccer
+scikit-learn
+PyYAML
+numpy
